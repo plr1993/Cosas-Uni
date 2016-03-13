@@ -1,0 +1,59 @@
+-- Preámbulo
+
+show databases
+
+use dbdm
+
+db.dropDatabase();
+
+(desde consola msdos y desde el directorio "Program Files"\MongoDB\Server\3.2\bin
+
+-- Ejercicio 4
+
+mongoimport --db dbdm --collection farmacias --file C:\data\datosPractica\farmacias.json --jsonArray
+
+Vuelvo a pestalla de cliente:
+
+use dbdm
+
+db.farmacias.find().pretty();
+
+-- si queremos contar
+db.farmacias.find().count();
+
+-- Ejercicio 5
+
+
+db.farmacias.find({"sanidadTown":"Bilbao"}).pretty();
+
+-- si queremos contar 
+db.farmacias.find({"sanidadTown":"Bilbao"}).count();
+
+
+db.farmacias.find({"sanidadTown":"Bilbao"},{"sanidadTown":1, "documentName":1}).pretty();
+
+-- Ejercicio 6
+
+db.farmacias.insert(
+{
+    _id: 2, 
+   "documentName": "Farmacia DBDM", 
+   "sanidadTown": "Alicante"
+}
+)
+ 
+
+db.farmacias.find({"sanidadTown":"Alicante"}).pretty();
+
+-- Ejercicio 7
+
+db.farmacias.update({_id:2},{_id: 2, "documentName": "Farmacia DBDM (Modificado)"});
+
+db.farmacias.find({_id:2}).pretty();
+
+-- Ejercicio 8
+
+db.farmacias.remove({_id:2})
+
+
+db.getSiblingDB("admin").shutdownServer()

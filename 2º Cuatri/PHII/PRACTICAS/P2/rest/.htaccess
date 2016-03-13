@@ -1,0 +1,86 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Ruta completa desde htdocs hasta el interior de la carpeta rest
+RewriteBase /ph2/practica2/rest/
+
+# Con el valor 307 en las reglas de abajo se redirigen todas las
+# peticiones, tanto las peticiones GET como las POST
+
+##################################################
+### REGLAS PARA LOGIN
+##################################################
+# Regla que redirige a rest/get/login.php (pregunta disponibilidad de login)
+# Con esta línea de abajo, sólo acepta peticiones GET
+RewriteCond %{THE_REQUEST} ^GET
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^login/(.*)$ get/login.php?prm=$1&%{QUERY_STRING} [R=307,L]
+
+# Regla que redirige a rest/post/login.php (hacer login)
+# Con esta línea de abajo, sólo acepta peticiones POST
+RewriteCond %{THE_REQUEST} ^POST
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^login/(.*)$ post/login.php?prm=$1&%{QUERY_STRING} [R=307,L]
+
+##################################################
+### REGLAS PARA REGISTRO / MODIFICAR DATOS DE USUARIO
+##################################################
+# Regla que redirige a rest/post/usuario.php
+# Con esta línea de abajo, sólo acepta peticiones POST
+RewriteCond %{THE_REQUEST} ^POST
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^usuario/(.*)$ post/usuario.php?prm=$1&%{QUERY_STRING} [R=307,L]
+
+##################################################
+### REGLAS PARA COMENTARIO
+##################################################
+# Regla que redirige a rest/get/comentario.php (consultas sobre comentarios)
+# Con esta línea de abajo, sólo acepta peticiones GET
+RewriteCond %{THE_REQUEST} ^GET
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^comentario/(.*)$ get/comentario.php?prm=$1&%{QUERY_STRING} [R=307,L]
+
+# Regla que redirige a rest/post/comentario.php (guardar nuevo comentario)
+# Con esta línea de abajo, sólo acepta peticiones POST
+RewriteCond %{THE_REQUEST} ^POST
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^comentario/(.*)$ post/comentario.php?prm=$1&%{QUERY_STRING} [R=307,L]
+
+##################################################
+### REGLAS PARA VIAJE
+##################################################
+# Regla que redirige a rest/get/viaje.php (pedir información sobre viajes)
+# Con esta línea de abajo, sólo acepta peticiones GET
+RewriteCond %{THE_REQUEST} ^GET
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^viaje/(.*)$ get/viaje.php?prm=$1&%{QUERY_STRING} [R=307,L]
+
+# Regla que redirige a rest/post/viaje.php (guardar info sobre un nuevo viaje)
+# Con esta línea de abajo, sólo acepta peticiones POST
+RewriteCond %{THE_REQUEST} ^POST
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^viaje/(.*)$ post/viaje.php?prm=$1&%{QUERY_STRING} [R=307,L]
+
+##################################################
+### REGLAS PARA FOTO
+##################################################
+# Regla que redirige a rest/get/foto.php (pedir información sobre fotos)
+# Con esta línea de abajo, sólo acepta peticiones GET
+RewriteCond %{THE_REQUEST} ^GET
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^foto/(.*)$ get/foto.php?prm=$1&%{QUERY_STRING} [R=307,L]
+
+# Regla que redirige a rest/post/foto.php (guardar info sobre una nueva foto)
+# Con esta línea de abajo, sólo acepta peticiones POST
+RewriteCond %{THE_REQUEST} ^POST
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^foto/(.*)$ post/foto.php?prm=$1&%{QUERY_STRING} [R=307,L]

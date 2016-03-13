@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta name="description" content="Página de viajes" />
+		<meta name="keywords" content="imágenes, fotos, web, viaje, viajes" />
+		<link rel="stylesheet" type="text/css" href="css1.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<meta charset="UTF-8">
+		<title>Viaggio</title>
+	</head>
+	<body>
+		<header>
+				<nav id="cssmenu">
+					<img id="LogoCab" src="logo.png" alt="Logo"><span id="titul">Viaggio</span>
+					<input type="checkbox" id="menu-trigger">
+					<ul>
+						<li><label  id="menuh" for="menu-trigger">&equiv; MENU</label></li>
+						<li><a href="index.html"><i class="fa fa-home"></i> Inicio</a></li>
+						<li><a href="buscar_viajes.html"><i class="fa fa-search"></i> Buscador</a></li>
+						<li><a href="login.html"><i class="fa fa-sign-in"></i> Inicio de sesión</a></li>
+						<li><a href="registro.html"><i class="fa fa-user-plus"></i> Registro</a></li>
+						<li><a href="perfil.html"><i class="fa fa-user"></i> Perfil</a></li>
+						<li><a href="#salir"><i class="fa fa-sign-out"></i> Salir</a></li>
+						<li><a href="crear_viaje.html"><i class="fa fa-plus-circle"></i> Crear viaje</a></li>
+					</ul>
+				</nav>
+		</header>
+    	<section id="loginform" class="bajar">
+    		<h2>Inicio de Sesion</h2>
+			<fieldset id="fieldlogin">
+	    		<legend>Login:</legend>
+					<form class="login" name="login" action="index_submit" method="get" accept-charset="utf-8">
+					    <ul>
+					        <li><label for="usermail">Usuario</label>
+					        <input type="text" id="usermail" placeholder="Nombre_usuario" pattern="^[^0-9][a-zA-Z0-9]*$" required autofocus></li>
+					        <li><label for="password">Contraseña</label>
+					        <input type="password" id="password" placeholder="Contraseña" required></li>
+					        <li>
+					        <input type="submit" value="Entrar"></li>
+					    </ul>
+					</form>
+			</fieldset>
+		</section>
+   		 <footer>
+			<p>Creado por: <a href="acerca.html">Pablo López Riquelme</a></p>
+			<p>Información de contacto:: <a href="mailto:pablolope93@gmail.com">pablolope93@gmail.com</a></p>
+			<p>&copy;Copyright 2016</p>
+		</footer>
+	</body>
+</html>

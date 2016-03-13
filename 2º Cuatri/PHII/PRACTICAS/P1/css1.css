@@ -1,0 +1,523 @@
+
+@media screen and (max-width: 480px){
+*{box-sizing: border-box;}/*para incluir los bordes en el ancho*/
+#parrilla{
+	width: 340px;
+	margin:auto;
+}
+nav{
+	background: url('5.png');
+}
+#titul{
+	color:white;
+	font-size: 25px;
+	font-family: 'Bad Script', cursive;
+	text-align: center;
+}
+nav>ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	max-height: 1.75em;
+	overflow: hidden;
+	transition: max-height 1s ease;
+}
+
+nav>ul>li{
+	line-height: 1.75em;
+}
+
+nav>ul>li>a{
+	display: block;
+	width: 100%;
+	color: #fff;
+	padding: .5em;
+}
+nav>ul>li>a:hover{
+	color: #239844;
+	background-color: #fff;
+}
+
+label[for="menu-trigger"]{
+	width: 100%;
+	display: block;
+	cursor: pointer;
+	padding-left: .5em;
+	font-size: 1.5em;
+	transform:  rotateX(0deg);
+	transition: transform 1s ease;
+}
+nav{
+	display: inline-block;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:1;
+}
+#parrilla{
+	padding-top: 80px;
+}
+.bajar{
+	padding-top: 80px;
+
+}
+/*******************************************************************************************************************************************
+***															Para el login																****
+*******************************************************************************************************************************************/
+#loginform label {
+    display: block;
+    color: #000000;
+}
+.cf:before,
+.cf:after {
+    content: ""; 
+    display: table;
+}
+ 
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+:focus {
+    outline: 0;
+}
+#loginform ul {
+    padding: 0;
+    margin: 0;
+}
+#loginform li {
+    display: inline;
+    float: left;
+}
+#loginform{
+	max-width: 24em;
+}
+#loginform input:not([type=submit]) {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 
+                0px 1px 0px 0px rgba(250, 250, 250, 0.5) ;
+}
+#loginform input[type=submit] {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: #64c8ef; /* Old browsers */
+    background: -moz-linear-gradient(top,  #64c8ef 0%, #00a2e2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#64c8ef), color-stop(100%,#00a2e2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #64c8ef 0%,#00a2e2 100%); /* W3C */
+    color: #fff;
+    padding: 5px 15px;
+    margin-right: 0;
+    margin-top: 15px;
+    border-radius: 3px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+/*******************************************************************************************************************************************
+***															Para el login																****
+*******************************************************************************************************************************************/
+#menu-trigger{
+	display: none;
+}
+#menu-trigger:checked + ul{
+	max-height: 22em;
+}
+
+#menu-trigger:checked + ul label[for="menu-trigger"]{
+	transform:  rotateX(-180deg);
+}
+}
+/*******************************************************************************************************************************************
+***															Para todo																	****
+*******************************************************************************************************************************************/
+#parrilla{
+	overflow: hidden;
+}
+#LogoCab{/*Logo de la cabecera*/
+	max-width: 4em;
+}
+body {
+   	background: url('wood_pattern.png');
+}
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	color:#54a6de;
+}
+/* NINTH EXAMPLE*/
+.view {
+   width: 300px;
+   height: 200px;
+   margin: 10px;
+   border: 10px solid #fff;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+}
+.view .mask,.view .content {
+   width: 800px;
+   height: 800px;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.view img {
+   display: block;
+   position: relative;
+   max-width: 380px;
+    min-width: 100%;
+    min-height: 100%;
+}
+.texo {
+   font-family: Georgia, serif;
+   font-style: italic;
+   font-size: 12px;
+   position: relative;
+   color: #fff;
+   padding: 10px 20px 20px;
+   text-align: center;
+}
+.view a.info {
+   display: inline-block;
+   text-decoration: none;
+   text-transform: uppercase;
+   -webkit-box-shadow: 0 0 1px #000;
+   -moz-box-shadow: 0 0 1px #000;
+   box-shadow: 0 0 1px #000;
+}
+.view a.info: hover {
+   -webkit-box-shadow: 0 0 5px #000;
+   -moz-box-shadow: 0 0 5px #000;
+   box-shadow: 0 0 5px #000;
+}
+.view-ninth .mask-1, .view-ninth .mask-2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 361px;
+    width: 361px;
+    background: rgba(28, 220, 242, 0.5);
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out 0.6s;
+    -moz-transition: all 0.3s ease-in-out 0.6s;
+    -o-transition: all 0.3s ease-in-out 0.6s;
+    transition: all 0.3s ease-in-out 0.6s;
+}
+.view-ninth .mask-1 {
+    left: auto;
+    right: 0;
+    -webkit-transform: rotate(56.5deg) translateX(-180px);
+    -moz-transform: rotate(56.5deg) translateX(-180px);
+    -o-transform: rotate(56.5deg) translateX(-180px);
+    -ms-transform: rotate(56.5deg) translateX(-180px);
+    transform: rotate(56.5deg) translateX(-180px);
+    -webkit-transform-origin: 100% 0%;
+    -moz-transform-origin: 100% 0%;
+    -o-transform-origin: 100% 0%;
+    -ms-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+}
+.view-ninth .mask-2 {
+    top: auto;
+    bottom: 0;
+    -webkit-transform: rotate(56.5deg) translateX(180px);
+    -moz-transform: rotate(56.5deg) translateX(180px);
+    -o-transform: rotate(56.5deg) translateX(180px);
+    -ms-transform: rotate(56.5deg) translateX(180px);
+    transform: rotate(56.5deg) translateX(180px);
+    -webkit-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+}
+.view-ninth .content {
+    background: rgba(0, 0, 0, 0.9);
+    height: 0;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    width: 361px;
+    overflow: hidden;
+    -webkit-transform: rotate(-33.5deg) translate(-112px, 166px);
+    -moz-transform: rotate(-33.5deg) translate(-112px, 166px);
+    -o-transform: rotate(-33.5deg) translate(-112px, 166px);
+    -ms-transform: rotate(-33.5deg) translate(-112px, 166px);
+    transform: rotate(-33.5deg) translate(-112px, 166px);
+    -webkit-transform-origin: 0% 100%;
+    -moz-transform-origin: 0% 100%;
+    -o-transform-origin: 0% 100%;
+    -ms-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-transition: all 0.4s ease-in-out 0.3s;
+    -moz-transition: all 0.4s ease-in-out 0.3s;
+    -o-transition: all 0.4s ease-in-out 0.3s;
+    transition: all 0.4s ease-in-out 0.3s;
+}
+
+.view-ninth:hover .content {
+    height: 120px;
+    width: 300px;
+    filter: alpha(opacity=90);
+    opacity: 0.9;
+    top: 40px;
+    -webkit-transform: rotate(0deg) translate(0, 0);
+    -moz-transform: rotate(0deg) translate(0, 0);
+    -o-transform: rotate(0deg) translate(0, 0);
+    -ms-transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg) translate(0, 0);
+}
+.view-ninth:hover .mask-1, .view-ninth:hover .mask-2 {
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.view-ninth:hover .mask-1 {
+    -webkit-transform: rotate(56.5deg) translateX(1px);
+    -moz-transform: rotate(56.5deg) translateX(1px);
+    -o-transform: rotate(56.5deg) translateX(1px);
+    -ms-transform: rotate(56.5deg) translateX(1px);
+    transform: rotate(56.5deg) translateX(1px);
+}
+.view-ninth:hover .mask-2 {
+    -webkit-transform: rotate(56.5deg) translateX(-1px);
+    -moz-transform: rotate(56.5deg) translateX(-1px);
+    -o-transform: rotate(56.5deg) translateX(-1px);
+    -ms-transform: rotate(56.5deg) translateX(-1px);
+    transform: rotate(56.5deg) translateX(-1px);
+}
+
+/*******************************************************************************************************************************************
+***															Para busqueda    															****
+*******************************************************************************************************************************************/
+
+
+
+#formulariobusqueda {
+	max-width: 800px; 
+	padding: 2em 2em 4em;
+}
+#formulariobusqueda ul{
+	list-style: none;
+}
+
+#formulariobusqueda label {float: left; display: block; width: 160px;}
+#formulariobusqueda input {display: inline;width: 160px;}
+#formularioregistro {
+	max-width: 800px; 
+	padding: 2em 2em 4em;
+	list-style: none;
+}
+#formularioregistro label {float: left; display: block; width: 160px;}
+#formularioregistro input { display: inline;width: 160px;}
+
+.comentarios p{
+  width : 70%;
+  overflow:hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+hr{border: 0; height: 0; border-top: 4px double black; text-align:center;}
+hr:after {position: relative; top: -22px; content:"\25cf\25cf\25cf"; font-size: 34px;line-height: 34px; color: black;}
+.com {border: 0 ; border-top: 4px double blue; width: 90%;}
+.comentarios{
+	text-align: center;
+	margin: auto;
+}
+/*******************************************************************************************************************************************
+***															Para escritorio																****
+*******************************************************************************************************************************************/
+@media screen and (min-width: 480px){
+	#parrilla{
+			width: 1020px;
+			margin:auto;
+		}
+	@media screen and (max-width: 1020px){
+		#parrilla{
+				width: 680px;
+				margin:auto;
+			}
+		@media screen and (max-width: 680px){
+			#parrilla{
+				width: 340px;
+				margin:auto;
+			}
+		}
+	}
+	
+	#cssmenu,
+	#cssmenu ul,
+	#cssmenu ul li,
+	#cssmenu ul li a {
+	  margin: 0;
+	  padding: 0;
+	  border: 0;
+	  list-style: none;
+	  line-height: 1;
+	  display: block;
+	  position: relative;
+	  -webkit-box-sizing: border-box;
+	  -moz-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+	#cssmenu {
+	  border-bottom: 3px solid #00FFFF;
+	  padding: 0 5px;
+	  width: auto;
+	  font-family: 'Bad Script', cursive;
+	  background: url('5.png');
+	  border-top-left-radius: 3px;
+	  border-top-right-radius: 3px;
+	  text-align: center;
+	}
+	#cssmenu:after,
+	#cssmenu ul:after {
+	  content: ".";
+	  display: block;
+	  clear: both;
+	  visibility: hidden;
+	  line-height: 0;
+	  height: 0;
+	}
+	#cssmenu ul li {
+	  display: inline-block;
+	}
+	#cssmenu.align-right ul li {
+	  float: right;
+	}
+	#cssmenu.align-center ul {
+	  text-align: center;
+	}
+	#cssmenu ul li a {
+	  font-size: 14px;
+	  padding: 15px;
+	  text-decoration: none;
+	  color: #0e83cd;
+	}
+	#cssmenu ul li:hover a,
+	#cssmenu ul li a:hover,
+	#cssmenu ul li.active a {
+	  color: #FF7F00;
+	}
+	#menu-trigger{/*para que no se vea el checkbox del menú*/ 
+		display: none;
+	}
+
+
+	/*******************************************************************************************************************************************
+	***															Para el login																****
+	*******************************************************************************************************************************************/
+	#loginform{
+	    min-height: 500px;
+	}
+	#res{
+	    min-height: 500px;
+	}
+	#loginform label {
+	    display: block;
+	    color: #000000;
+	}
+	.cf:before,
+	.cf:after {
+	    content: ""; 
+	    display: table;
+	}
+	 
+	.cf:after {
+	    clear: both;
+	}
+	.cf {
+	    *zoom: 1;
+	}
+	:focus {
+	    outline: 0;
+	}
+	#loginform ul {
+	    padding: 0;
+	    margin: 0;
+	}
+	#loginform li {
+	    display: inline;
+	    float: left;
+	}
+	#loginform{
+		max-width: 24em;
+		margin: auto;
+	}
+	#loginform input:not([type=submit]) {
+	    padding: 5px;
+	    margin-right: 10px;
+	    border-radius: 3px;
+	}
+	#loginform input[type=submit] {
+	    border: 1px solid rgba(0, 0, 0, 0.3);
+	    background: #64c8ef; /* Old browsers */
+	    background: -moz-linear-gradient(top,  #64c8ef 0%, #00a2e2 100%); /* FF3.6+ */
+	    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#64c8ef), color-stop(100%,#00a2e2)); /* Chrome,Safari4+ */
+	    background: -webkit-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Chrome10+,Safari5.1+ */
+	    background: -o-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* Opera 11.10+ */
+	    background: -ms-linear-gradient(top,  #64c8ef 0%,#00a2e2 100%); /* IE10+ */
+	    background: linear-gradient(to bottom,  #64c8ef 0%,#00a2e2 100%); /* W3C */
+	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#64c8ef', endColorstr='#00a2e2',GradientType=0 ); /* IE6-9 */
+	    color: #fff;
+	    padding: 5px 15px;
+	    margin-right: 0;
+	    margin-top: 15px;
+	    border-radius: 3px;
+	    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+	}
+	/*******************************************************************************************************************************************
+	***															Para el login																****
+	*******************************************************************************************************************************************/
+	#titul{
+		font-size: 2em;
+		color:white;
+	}
+	#menuh{/*Para que no se vea la li de MENU*/
+		display: none;
+		background-color: #FF7F00; 
+	}
+	#cssmenu ul li a{
+		font-size: 20px;
+	}
+}
+#datosviaje{
+	text-align: center;
+}
+.perro{
+	text-align: center;
+}
+.foto{
+	float:left;
+	display: inline-block;
+}
+.mongo{
+	max-width: 320px;
+}
+#comeh{
+	display: -webkit-box;
+}
+#comeh ul{
+	text-align: left;
+	list-style: none;
+}
+#comehh{
+	padding-right: 36px;
+}
+.foto p{
+	margin-left: 10px;
+}
+input:focus { border: 2px solid blue; border-radius: 4px; }
+input:hover { border: 2px solid blue; border-radius: 4px; }
+a:focus { border: 2px solid blue; border-radius: 4px; }
+

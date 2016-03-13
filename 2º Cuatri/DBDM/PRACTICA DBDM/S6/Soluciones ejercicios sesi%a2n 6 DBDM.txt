@@ -1,0 +1,74 @@
+
+Arranco BD
+
+cd c:\"Program Files"\MongoDB\Server\3.2\bin
+
+mongod --httpinterface --rest
+
+cd c:\"Program Files"\MongoDB\Server\3.2\bin
+
+mong0
+
+
+show databases
+
+use dbdm
+
+db.dropDatabase();
+
+
+cd c:\"Program Files"\MongoDB\Server\3.2\bin
+
+mongoimport --db dbdm --collection farmacias --file C:\data\datosPractica\farmacias.json --jsonArray
+
+
+Subimos imagenes
+
+mongofiles put --local  C:\data\datosPractica\Interior1.jpg -d dbdm  --prefix fotos  Interior1.jpg
+
+
+mongofiles put --local  C:\data\datosPractica\Exterior1.jpg -d dbdm  --prefix fotos  Exterior1.jpg
+
+consultamos
+
+db.fotos.files.find();
+db.fotos.chunks.find();
+
+
+Metemos las imagenes en a farmacia 1 mediante el metodo "relacionar"
+
+
+db.farmacias.update ({_id:1},
+{
+  "documentName" : "PEREZ GARCIA, Olga Isabel",
+  "documentDescription" : "Rodriguez Arias, 43 48011 Bilbao",
+  "sanidadCenterType" : "Farmacia",
+  "sanidadCode" : "farmac_far",
+  "sanidadName" : "Farmacia: PEREZ GARCIA, Olga Isabel",
+  "sanidadPostalCode" : "48011",
+  "sanidadProvince" : "Bizkaia",
+  "sanidadRegion" : "",
+  "sanidadStreet" : "Rodriguez Arias, 43",
+  "sanidadStreetSnap" : "",
+  "sanidadTown" : "Bilbao",
+  "imagenes":[{id_imagen:ObjectId("56ddd0f4738abc1b88000001"), "tipo_imagen" : "Interior"},
+              {id_imagen:ObjectId("56ddd1ad738abc1204000001"), "tipo_imagen" : "Exterior"}
+              ]
+})
+
+
+comprobamos
+
+db.farmacias.find({_id:1}).pretty();
+
+comparamos el 1 y el 2
+
+
+db.farmacias.find({$or:[{_id:1},{_id:2}]}).pretty();
+
+
+
+mongofiles get --local  C:\data\datosPractica\Interior1_extra.jpg -d dbdm  --prefix fotos  Interior1.jpg
+
+
+db.getSiblingDB("admin").shutdownServer()
